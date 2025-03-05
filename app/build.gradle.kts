@@ -33,6 +33,10 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+    // Defino viewBinding para que funcione el binding
+    viewBinding {
+        enable = true
+    }
 }
 
 dependencies {

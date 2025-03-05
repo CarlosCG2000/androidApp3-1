@@ -7,14 +7,20 @@
     android:layout_height="match_parent"
     tools:context=".primeraApp.FirstAppActivity">
 
-    <!-- Nuevas propiedades:
+    <!-- Nuevas propiedades para TextView:
     - textSize: se utiliza para cambiar el tamaño de la fuente, en sp (scale-independent pixels) en vez de dp (density-independent pixels).
+    - textStyle: se utiliza para cambiar el estilo de la fuente (normal, cursiva, negrita, etc.).
+    - textColor: se utiliza para cambiar el color del texto.
+    - background: color a un texto o un elemento.
     -->
     <TextView
         android:id="@+id/tv"
 
         android:text="Hello World!"
-        android:textSize="22sp"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:background="@android:color/holo_green_light"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,7 +29,27 @@
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-    />
+        />
+
+    <!-- Nuevas propiedades para Button:
+    - backgroundTint
+    -->
+    <Button
+        android:id="@+id/bt"
+
+        android:text="Pulsame"
+        android:textColor="@color/white"
+
+        app:layout_constraintTop_toBottomOf="@id/tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+
+        />
 
 
 

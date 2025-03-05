@@ -73,6 +73,6 @@ Podemos extraer `nuevas propiedades` y conocimientos que no tengo de las `clases
 
 Tener en cuenta que se pueden `anidar unos layouts` dentro de otros.
 
-El fichero `AndroidManifest.xml` es donde se encuentras que `Activities` se tiene, que permisos, etc.
+El fichero `AndroidManifest.xml` es donde se encuentran que `Activities` se tiene, que permisos, etc.
 
 
