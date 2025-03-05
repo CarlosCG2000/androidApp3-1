@@ -47,8 +47,6 @@ El temario del curso será:
 
 =====================================================================================================
 
-MIN 03:07:06
-
 # Introducción del proyecto
 Lo primero que hay que hacer es entender el proyecto.
 
@@ -76,3 +74,5 @@ Tener en cuenta que se pueden `anidar unos layouts` dentro de otros.
 El fichero `AndroidManifest.xml` es donde se encuentran que `Activities` se tiene, que permisos, etc.
 
 
+
+MIN 03:46:46

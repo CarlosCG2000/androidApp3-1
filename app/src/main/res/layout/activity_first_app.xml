@@ -13,45 +13,65 @@
     - textColor: se utiliza para cambiar el color del texto.
     - background: color a un texto o un elemento.
     -->
-    <TextView
-        android:id="@+id/tv"
+        <TextView
+            android:id="@+id/tv"
 
-        android:text="Hello World!"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:textColor="@android:color/black"
-        android:background="@android:color/holo_green_light"
+            android:text="Escribe tu nombre"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:background="@android:color/holo_green_light"
+            android:padding="10dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.2"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+    <!-- Nuevas propiedades para nuevo tipo AppCompatEditText:
+    - singleLine
+    - maxLines
+    -->
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et"
+
+        android:singleLine="true"
+        android:maxLines="1"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
 
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.9"
         android:layout_height="wrap_content"
-        />
+    />
 
     <!-- Nuevas propiedades para Button:
     - backgroundTint
     -->
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/bt"
 
         android:text="Pulsame"
         android:textColor="@color/white"
-
-        app:layout_constraintTop_toBottomOf="@id/tv"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="16dp"
+        android:backgroundTint="@color/black"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et"
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/black"
-
-        />
-
-
+    />
 
 
 
