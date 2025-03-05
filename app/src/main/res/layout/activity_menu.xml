@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#6F78B1"
+    tools:context=".MenuActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdh1"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="146dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdh2"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdv1"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdv2"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+    />
+
+    <View
+        android:background="#0019B3"
+        app:layout_constraintTop_toBottomOf="@id/gdh1"
+        app:layout_constraintBottom_toBottomOf="@id/gdh2"
+        app:layout_constraintStart_toEndOf="@id/gdv1"
+        app:layout_constraintEnd_toEndOf="@id/gdv2"
+
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        />
+
+    <TextView
+        android:id="@+id/tvMenu"
+        android:text="BIENVENIDO A LA APP 3 EN 1"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:background="#3F51B5"
+
+        app:layout_constraintTop_toBottomOf="@+id/gdh1"
+        app:layout_constraintStart_toStartOf="@id/gdv1"
+        app:layout_constraintEnd_toEndOf="@id/gdv2"
+        android:paddingVertical="20dp"
+
+        android:layout_width="0dp"
+        app:layout_constraintWidth_default="spread"
+        android:layout_height="wrap_content"
+    />
+
+    <!-- CADENA HORIZONTAL DE BOTONES DEL MENU -->
+    <Button
+        android:id="@+id/bt1"
+        android:text="App de ejemplo"
+        android:textColor="@color/black"
+        android:backgroundTint="@android:color/holo_orange_light"
+
+        app:layout_constraintStart_toStartOf="@id/gdv1"
+        app:layout_constraintEnd_toEndOf="@id/gdv2"
+        app:layout_constraintTop_toBottomOf="@+id/tvMenu"
+        app:layout_constraintBottom_toTopOf="@+id/btIMC"
+
+        app:layout_constraintVertical_chainStyle="spread"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+    />
+
+    <Button
+        android:id="@+id/btIMC"
+        android:text="App IMC"
+        android:textColor="@color/black"
+        android:backgroundTint="@android:color/holo_orange_light"
+
+        app:layout_constraintStart_toStartOf="@id/gdv1"
+        app:layout_constraintEnd_toEndOf="@id/gdv2"
+        app:layout_constraintTop_toBottomOf="@+id/bt1"
+        app:layout_constraintBottom_toTopOf="@id/btSuperHero"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+    />
+
+    <Button
+        android:id="@+id/btSuperHero"
+        android:text="App Super Heroes"
+        android:textColor="@color/black"
+        android:backgroundTint="@android:color/holo_orange_light"
+
+        app:layout_constraintStart_toStartOf="@id/gdv1"
+        app:layout_constraintEnd_toEndOf="@id/gdv2"
+        app:layout_constraintTop_toBottomOf="@+id/btIMC"
+        app:layout_constraintBottom_toTopOf="@id/btMapas"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+    />
+
+    <Button
+        android:id="@+id/btMapas"
+        android:text="App Mapas"
+        android:textColor="@color/black"
+        android:backgroundTint="@android:color/holo_orange_light"
+
+        app:layout_constraintStart_toStartOf="@id/gdv1"
+        app:layout_constraintEnd_toEndOf="@id/gdv2"
+        app:layout_constraintTop_toBottomOf="@+id/btSuperHero"
+        app:layout_constraintBottom_toBottomOf="@id/gdh2"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+    />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

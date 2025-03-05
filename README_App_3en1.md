@@ -19,9 +19,10 @@ El temario del curso será:
 - [Arrays en Kotlin](https://youtu.be/vJapzH_46a8?t=9141) ✅
 - [Listas en Kotlin](https://youtu.be/vJapzH_46a8?t=10165) ✅
 
-- [Desarrollando nuestra primera APP](https://youtu.be/vJapzH_46a8?t=11200)
-  - Navegación de pantallas
+- [Desarrollando nuestra primera APP](https://youtu.be/vJapzH_46a8?t=11200) ✅
+  - Navegación de pantallas ✅
 - [Crear un menú para navegar entre apps](https://youtu.be/vJapzH_46a8?t=14874)
+
 - [Diseñar y programar app completa IMC](https://youtu.be/vJapzH_46a8?t=15773)
   - Cambios entre pantallas
   - Gestión y creación de colores
@@ -30,16 +31,19 @@ El temario del curso será:
   - RangeSlider
   - Compatibilidad con múltiples idiomas (Strings)
   - Listeners y clicks
+
 - [Diseñar y programar app completa TODO](https://youtu.be/vJapzH_46a8?t=23805)
   - Recyclerview
   - Dialog
   - Sealed class
   - Funciones lambdas
+
 - [Diseñar y programar una buscador de Superhéroes](https://youtu.be/ndqIqh6joGA?t=9)
   - SearchView
   - Consumo de APIs con Retrofit
   - Funciones lambdas
   - Recyclerview
+
 - [Diseñar y programar una pantalla de ajustes con persistencia de datos](https://youtu.be/ndqIqh6joGA?t=10446)
   - Persistencia de datos con DataStore
   - Switch y RangeSlider
@@ -47,7 +51,7 @@ El temario del curso será:
 
 =====================================================================================================
 
-# Introducción del proyecto
+# 0. Introducción del proyecto
 Lo primero que hay que hacer es entender el proyecto.
 
 Nuestra app se divide en dos partes:
@@ -60,7 +64,7 @@ Vamos a dividir para cada mini proyecto `un package`, para probar muchas cosas e
 
 * Esto `no es lo recomendable`, ya que lo que deberiamos es seguir `una arquitectura` para probarlo con `Clean Arquitecture` pero como es el primer proyecto para verlo con funciona nos vale.
 
-# Primera App
+# 1. Primera App
 Creamos en un package nuevo con el nombre `primeraApp`.
 
 Creamos dentro un `Empty Views Activity` (ojo cuidado no una `Empty Activity` que utiliza `Jetpack Compose` en vez de `XML`) llamado `FirstAppActivity` y solo esta vez la seleccionaremos como `Launcher Activity` ya que no tenemos ninguna pantalla.
@@ -72,6 +76,30 @@ Podemos extraer `nuevas propiedades` y conocimientos que no tengo de las `clases
 Tener en cuenta que se pueden `anidar unos layouts` dentro de otros.
 
 El fichero `AndroidManifest.xml` es donde se encuentran que `Activities` se tiene, que permisos, etc.
+
+## 1.1. Navegación de pantallas
+Para navegar usamos los `intents`
+
+- Pantalla inicio:
+```java
+    // Necesitamos el contexto (this, significa esta Activity) y a que actividad queremos ir
+    val intent = Intent(this, ResultActivity::class.java)
+    intent.putExtra("EXTRA_NAME", name) // le puedo pasar informacion a la otra Actividad
+    // La navegacion a traves del intent
+    startActivity(intent)
+```
+
+Pantalla llegar:
+```java
+ val name = intent.extras?.getString("EXTRA_NAME").orEmpty() // me devuelve el valor de pasado por la otra pantalla
+```
+
+## 1.2. Crear un menú para navegar entre apps
+
+
+
+# 2. Diseñar y programar app completa IMC
+
 
 
 

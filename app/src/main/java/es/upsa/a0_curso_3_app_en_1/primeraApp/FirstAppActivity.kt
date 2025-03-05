@@ -1,5 +1,6 @@
 package es.upsa.a0_curso_3_app_en_1.primeraApp
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -20,9 +21,9 @@ class FirstAppActivity : AppCompatActivity() {
 
         super.onCreate(savedInstanceState)
 
-        val viewBinding = ActivityFirstAppBinding.inflate( this.getLayoutInflater() ); // decimos a Android que genere automáticamente la clase, importante antes del 'setContentView'
+        val viewBinding = ActivityFirstAppBinding.inflate( this.layoutInflater); // decimos a Android que genere automáticamente la clase, importante antes del 'setContentView'
         // setContentView(R.layout.activity_first_app)
-         setContentView( viewBinding.getRoot() ) // fijamos que la vista es el elemento raiz.
+         setContentView( viewBinding.root ) // fijamos que la vista es el elemento raiz.
 
         val btn:AppCompatButton = viewBinding.bt // findViewById<AppCompatButton>(R.id.bt)
         val edtext:AppCompatEditText = viewBinding.et
@@ -31,8 +32,15 @@ class FirstAppActivity : AppCompatActivity() {
             // View.OnClickListener() {}
             val name = edtext.text.toString()
 
-            if ( name.isNotEmpty() )
+            if ( name.isNotEmpty() ) {
                 Log.i(TAG, "Pulsando el botón con text ${edtext.text.toString()}")
+
+                // Necesitamos el contexto (this, significa esta Activity) y a que actividad queremos ir
+                val intent = Intent(this, ResultActivity::class.java)
+                intent.putExtra("EXTRA_NAME", name) // le puedo pasar informacion a la otra Actividad
+                // La navegacion a traves del intent
+                startActivity(intent)
+            }
         }
 
     }
