@@ -49,7 +49,7 @@ El temario del curso será:
 
 MIN 03:07:06
 
-# Introducción del proyecto.
+# Introducción del proyecto
 Lo primero que hay que hacer es entender el proyecto.
 
 Nuestra app se divide en dos partes:
@@ -62,12 +62,17 @@ Vamos a dividir para cada mini proyecto `un package`, para probar muchas cosas e
 
 * Esto `no es lo recomendable`, ya que lo que deberiamos es seguir `una arquitectura` para probarlo con `Clean Arquitecture` pero como es el primer proyecto para verlo con funciona nos vale.
 
-# Primera App.
+# Primera App
 Creamos en un package nuevo con el nombre `primeraApp`.
 
 Creamos dentro un `Empty Views Activity` (ojo cuidado no una `Empty Activity` que utiliza `Jetpack Compose` en vez de `XML`) llamado `FirstAppActivity` y solo esta vez la seleccionaremos como `Launcher Activity` ya que no tenemos ninguna pantalla.
 
+* [ Ver mejor en clases de Roberto `de la explicación de los Layout` ]
+En este curso empezamos por explicación de `FrameLayout`, `LinearLayout` y `ContraintLayout` (lo mejor).
+Podemos extraer `nuevas propiedades` y conocimientos que no tengo de las `clases del grado con Roberto`.
 
+Tener en cuenta que se pueden `anidar unos layouts` dentro de otros.
 
+El fichero `AndroidManifest.xml` es donde se encuentras que `Activities` se tiene, que permisos, etc.
 
 
