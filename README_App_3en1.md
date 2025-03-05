@@ -21,7 +21,7 @@ El temario del curso será:
 
 - [Desarrollando nuestra primera APP](https://youtu.be/vJapzH_46a8?t=11200) ✅
   - Navegación de pantallas ✅
-- [Crear un menú para navegar entre apps](https://youtu.be/vJapzH_46a8?t=14874)
+- [Crear un menú para navegar entre apps](https://youtu.be/vJapzH_46a8?t=14874) ✅
 
 - [Diseñar y programar app completa IMC](https://youtu.be/vJapzH_46a8?t=15773)
   - Cambios entre pantallas
@@ -95,12 +95,11 @@ Pantalla llegar:
 ```
 
 ## 1.2. Crear un menú para navegar entre apps
-
-
+MIRAR COMO SERIA PARA REPLICAR MI MENU DE LOS SIMPSONS [ PUEDO CREAR UNA APLICACIÓN PARA EMPEZAR A VERLO ]
 
 # 2. Diseñar y programar app completa IMC
 
 
 
 
-MIN 03:46:46
+MIN 04:23:01
