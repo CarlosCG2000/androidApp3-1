@@ -15,7 +15,11 @@ import es.upsa.a0_curso_3_app_en_1.databinding.ActivityFirstAppBinding
 class FirstAppActivity : AppCompatActivity() {
 
     // private var viewBinding: ActivityFirstAppBinding? = null
-    private val TAG = javaClass.simpleName
+
+    companion object // es un contenedor añadir variables 'static' en Kotlin
+    {
+        private val TAG = FirstAppActivity::class.java.name
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
