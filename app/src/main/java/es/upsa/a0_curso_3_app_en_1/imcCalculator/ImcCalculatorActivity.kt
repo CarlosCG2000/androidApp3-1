@@ -16,5 +16,9 @@ class ImcCalculatorActivity : AppCompatActivity() {
 
         setContentView(viewBinding.root)
 
+
+
     }
+
+
 }
