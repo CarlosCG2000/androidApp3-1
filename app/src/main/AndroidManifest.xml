@@ -18,6 +18,7 @@
             android:name=".MenuActivity"
             android:exported="true">
             <intent-filter>
+
                 <!-- Esto es lo que dice que es el Activity principal, el que sale cunaod se inicia la pantalla -->
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,16 +26,21 @@
             </intent-filter>
         </activity>
 
-        <!-- Activity 1  -->
+        <!-- Activity 1 -->
         <activity
             android:name=".primeraApp.FirstAppActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true" />
 
         <!-- Activity 2 -->
         <activity
             android:name=".primeraApp.ResultActivity"
             android:exported="false" />
+
+        <!-- Activity IMC Calculator -->
+        <activity
+            android:name=".imcCalculator.ImcCalculatorActivity"
+            android:exported="false" />
+
     </application>
 
 </manifest>

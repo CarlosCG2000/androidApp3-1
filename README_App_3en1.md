@@ -95,11 +95,14 @@ Pantalla llegar:
 ```
 
 ## 1.2. Crear un menú para navegar entre apps
-MIRAR COMO SERIA PARA REPLICAR MI MENU DE LOS SIMPSONS [ PUEDO CREAR UNA APLICACIÓN PARA EMPEZAR A VERLO ]
+### `[ MIRAR COMO SERIA PARA REPLICAR MI MENU DE LOS SIMPSONS PUEDO CREAR UNA APLICACIÓN PARA EMPEZAR A VERLO ]`
 
 # 2. Diseñar y programar app completa IMC
+Definición de `los colores` en los `recursos: colors.xml`.
+### `[ DEFINIR LOS COLORES DE MI APLICACIÓN IGUALMENTE EN LOS RECURSOS ANTES DE COMENZAR LA APLICACIÓN]`
+
+Las `vistas` se va a formar a partir de `varios componentes`.
 
 
 
-
-MIN 04:23:01
+# MIN 04:32:37

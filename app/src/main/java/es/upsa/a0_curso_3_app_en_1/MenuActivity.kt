@@ -6,6 +6,7 @@ import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 
 import es.upsa.a0_curso_3_app_en_1.databinding.ActivityMenuBinding
+import es.upsa.a0_curso_3_app_en_1.imcCalculator.ImcCalculatorActivity
 import es.upsa.a0_curso_3_app_en_1.primeraApp.FirstAppActivity
 
 class MenuActivity : AppCompatActivity() {
@@ -18,14 +19,20 @@ class MenuActivity : AppCompatActivity() {
         setContentView(viewBinding.root)
 
         val btInicio:Button = viewBinding.bt1
+        val btIMC:Button = viewBinding.btIMC
 
         btInicio.setOnClickListener { navegarToEjemploApp() }
+        btIMC.setOnClickListener { navegarToIMCApp() }
     }
-    
+
     private fun navegarToEjemploApp(){
         val intent = Intent(this, FirstAppActivity::class.java)
         startActivity(intent)
     }
 
+    private fun navegarToIMCApp(){
+        val intent = Intent(this, ImcCalculatorActivity::class.java)
+        startActivity(intent)
+    }
 
 }
