@@ -108,6 +108,10 @@ He creado una interfaz llamada `Logger.kt` donde defino todo los logs con su tag
 Los `Themes` son los temas que tengo, solo hay uno puesto en el `Manifest` pero puedo personalizar los mios propios.
 
 Un `RecycledView` es la forma correcta de cargar listas de elementos.
+Vamos a tener que crear un `adaptador` y un `viewHolder`.
+El `adapter` es una clase que conecta toda la información con el `RecyclerView`. Es el puente entre los datos `(items)` y la interfaz `(RecyclerView)`. Y el `ViewHolder` va a ser la clase que lo pinta.
 
-# MIN 07:00:00
+Vamos a necesitar las `Sealed Class`. Las clases selladas, con esto vamos a crear subclases o sub objetos de esta clase principal. Son como enumerados con superpoderes porque pueden contener estados.
+
+# MIN 07:31:16
 
