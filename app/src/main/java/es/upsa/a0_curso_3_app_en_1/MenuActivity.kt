@@ -12,17 +12,13 @@ import es.upsa.a0_curso_3_app_en_1.primeraApp.FirstAppActivity
 class MenuActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
-
         val viewBinding = ActivityMenuBinding.inflate( this.layoutInflater )
-
         setContentView(viewBinding.root)
 
-        val btInicio:Button = viewBinding.bt1
-        val btIMC:Button = viewBinding.btIMC
-
-        btInicio.setOnClickListener { navegarToEjemploApp() }
-        btIMC.setOnClickListener { navegarToIMCApp() }
+        viewBinding.bt1.setOnClickListener { navegarToEjemploApp() }
+        viewBinding.btIMC.setOnClickListener { navegarToIMCApp() }
     }
 
     private fun navegarToEjemploApp(){

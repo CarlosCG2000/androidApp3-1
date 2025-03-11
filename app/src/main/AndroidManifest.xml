@@ -26,17 +26,17 @@
             </intent-filter>
         </activity>
 
-        <!-- Activity 1 -->
+        <!-- Activity - 1 App - Pantalla Principal -->
         <activity
             android:name=".primeraApp.FirstAppActivity"
             android:exported="true" />
 
-        <!-- Activity 2 -->
+        <!-- Activity 2 - 1 App - Pantalla Segunda -->
         <activity
             android:name=".primeraApp.ResultActivity"
             android:exported="false" />
 
-        <!-- Activity IMC Calculator -->
+        <!-- Activity - IMC Calculator App - Pantalla Principal -->
         <activity
             android:name=".imcCalculator.ImcCalculatorActivity"
             android:exported="false" />

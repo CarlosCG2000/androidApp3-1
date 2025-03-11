@@ -11,9 +11,7 @@ class ImcCalculatorActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
-
         val viewBinding = ActivityImcCalculatorBinding.inflate(this.layoutInflater)
-
         setContentView(viewBinding.root)
 
 

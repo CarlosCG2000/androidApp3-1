@@ -19,14 +19,15 @@ class ResultActivity : AppCompatActivity() {
 
         super.onCreate(savedInstanceState)
 
-        val viewBinding = ActivityResultBinding.inflate( this.layoutInflater ); // decimos a Android que genere automáticamente la clase, importante antes del 'setContentView'
+        // decimos a Android que genere automáticamente la clase, importante antes del 'setContentView'
+        val viewBinding = ActivityResultBinding.inflate( this.layoutInflater )
         // setContentView(R.layout.activity_first_app)
         setContentView( viewBinding.root ) // fijamos que la vista es el elemento raiz.
 
-        val tvResult:TextView = viewBinding.tv
-
+        // ______________ RECOGER VALOR DE NAGEGACIÓN ______________
         val name = intent.extras?.getString("EXTRA_NAME").orEmpty() // me devuelve el valor de pasado por la otra pantalla
 
-        tvResult.setText(name)
+        // SE MUESTRA POR PANTALLA
+        viewBinding.tv.setText(name)
     }
 }
