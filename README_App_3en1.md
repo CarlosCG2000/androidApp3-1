@@ -23,14 +23,14 @@ El temario del curso será:
   - Navegación de pantallas ✅
 - [Crear un menú para navegar entre apps](https://youtu.be/vJapzH_46a8?t=14874) ✅
 
-- [Diseñar y programar app completa IMC](https://youtu.be/vJapzH_46a8?t=15773)
-  - Cambios entre pantallas
-  - Gestión y creación de colores
-  - Diseño de UI
-  - CardView
-  - RangeSlider
-  - Compatibilidad con múltiples idiomas (Strings)
-  - Listeners y clicks
+- [Diseñar y programar app completa IMC](https://youtu.be/vJapzH_46a8?t=15773) ✅
+  - Cambios entre pantallas ✅
+  - Gestión y creación de colores ✅
+  - Diseño de UI ✅
+  - CardView ✅
+  - RangeSlider ✅
+  - Compatibilidad con múltiples idiomas (Strings) ✅
+  - Listeners y clicks ✅
 
 - [Diseñar y programar app completa TODO](https://youtu.be/vJapzH_46a8?t=23805)
   - Recyclerview
@@ -103,6 +103,8 @@ Definición de `los colores` en los `recursos: colors.xml`.
 
 Las `vistas` se va a formar a partir de `varios componentes`.
 
+He creado una interfaz llamada `Logger.kt` donde defino todo los logs con su tags para poder implementarlo en los ficheros.
 
+Un `RecycledView` es la forma correcta de cargar listas de elementos.
 
-# MIN 04:32:37
+# MIN 06:37:00

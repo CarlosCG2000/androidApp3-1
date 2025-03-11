@@ -108,7 +108,7 @@
 
     <Button
         android:id="@+id/btSuperHero"
-        android:text="App Super Heroes"
+        android:text="App TODO List"
         android:textColor="@color/black"
         android:backgroundTint="@android:color/holo_orange_light"
 
@@ -123,7 +123,7 @@
 
     <Button
         android:id="@+id/btMapas"
-        android:text="App Mapas"
+        android:text="App Super Heroes"
         android:textColor="@color/black"
         android:backgroundTint="@android:color/holo_orange_light"
 

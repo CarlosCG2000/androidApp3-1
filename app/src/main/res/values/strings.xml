@@ -1,4 +1,24 @@
 <resources>
     <string name="app_name">0_Curso-3-app-en-1</string>
     <string name="extra_name">EXTRA_NAME</string>
+    <string name="tv_hombre">Hombre</string>
+    <string name="layout_mujer">Mujer</string>
+    <string name="layout_altura">Altura</string>
+    <string name="layout_valor_slider">%1$d cm</string>
+    <string name="label_peso">%1$d kg</string>
+    <string name="altura">Altura</string>
+    <string name="peso">Peso</string>
+    <string name="edad">Edad</string>
+    <string name="label_edad">%1$d años</string>
+    <string name="result">Tu resultado</string>
+    <string name="recalculate">Atrás</string>
+    <string name="error">error</string>
+    <string name="bajo_peso">Bajo Peso</string>
+    <string name="descrip_bajo">Estás por debajo de lo óptimo para tu peso y altura</string>
+    <string name="normal">Normal</string>
+    <string name="descrip_normal">Estás bien para tu peso y altura</string>
+    <string name="sobrepeso">Sobrepeso</string>
+    <string name="descrip_sobrepeso">Estás por encima de tu óptimo peso según tu altura</string>
+    <string name="obesidad">Obesidad</string>
+    <string name="descrip_obesidad">Estás muy encima de tu óptimo peso según tu altura</string>
 </resources>

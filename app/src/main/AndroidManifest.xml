@@ -17,11 +17,9 @@
         <activity
             android:name=".MenuActivity"
             android:exported="true">
+        <!-- Esto es lo que dice que es el Activity principal, el que sale cunaod se inicia la pantalla -->
             <intent-filter>
-
-                <!-- Esto es lo que dice que es el Activity principal, el que sale cunaod se inicia la pantalla -->
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -41,6 +39,11 @@
             android:name=".imcCalculator.ImcCalculatorActivity"
             android:exported="false" />
 
+        <!-- Activity - IMC Calculator App - Pantalla Secundaria -->
+        <activity
+            android:name=".imcCalculator.ResultIMCActivity"
+            android:exported="false" />
     </application>
+
 
 </manifest>
