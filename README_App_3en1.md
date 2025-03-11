@@ -105,9 +105,9 @@ Las `vistas` se va a formar a partir de `varios componentes`.
 
 He creado una interfaz llamada `Logger.kt` donde defino todo los logs con su tags para poder implementarlo en los ficheros.
 
-Un `RecycledView` es la forma correcta de cargar listas de elementos.
-
 Los `Themes` son los temas que tengo, solo hay uno puesto en el `Manifest` pero puedo personalizar los mios propios.
+
+Un `RecycledView` es la forma correcta de cargar listas de elementos.
 
 # MIN 07:00:00
 
