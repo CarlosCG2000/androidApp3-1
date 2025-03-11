@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import es.upsa.a0_curso_3_app_en_1.databinding.ActivityMenuBinding
 import es.upsa.a0_curso_3_app_en_1.imcCalculator.ImcCalculatorActivity
 import es.upsa.a0_curso_3_app_en_1.primeraApp.FirstAppActivity
+import es.upsa.a0_curso_3_app_en_1.todoapp.TodoActivity
 
 class MenuActivity : AppCompatActivity() {
 
@@ -19,6 +20,8 @@ class MenuActivity : AppCompatActivity() {
 
         viewBinding.bt1.setOnClickListener { navegarToEjemploApp() }
         viewBinding.btIMC.setOnClickListener { navegarToIMCApp() }
+        viewBinding.btTODO.setOnClickListener { navegarToTODOApp() }
+
     }
 
     private fun navegarToEjemploApp(){
@@ -28,6 +31,11 @@ class MenuActivity : AppCompatActivity() {
 
     private fun navegarToIMCApp(){
         val intent = Intent(this, ImcCalculatorActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun navegarToTODOApp(){
+        val intent = Intent(this, TodoActivity::class.java)
         startActivity(intent)
     }
 

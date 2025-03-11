@@ -12,38 +12,37 @@
         android:supportsRtl="true"
         android:theme="@style/Theme._0_Curso3appen1"
         tools:targetApi="31">
+        <!-- Es el tema que tengfo pero puedo crear varios difernertes en themes.xml y seleccionar el que a mi me gusta más para facilitarme en la app-->
+        <!--  android:theme="@style/Theme._0_Curso3appen1" -->
+
 
         <!-- Activity Menu (principal) -->
         <activity
             android:name=".MenuActivity"
             android:exported="true">
-        <!-- Esto es lo que dice que es el Activity principal, el que sale cunaod se inicia la pantalla -->
+   <!-- Esto es lo que dice que es el Activity principal, el que sale cunaod se inicia la pantalla -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <!-- Activity - 1 App - Pantalla Principal -->
+        </activity> <!-- Activity - 1 App - Pantalla Principal -->
         <activity
             android:name=".primeraApp.FirstAppActivity"
-            android:exported="true" />
-
-        <!-- Activity 2 - 1 App - Pantalla Segunda -->
+            android:exported="true" /> <!-- Activity 2 - 1 App - Pantalla Segunda -->
         <activity
             android:name=".primeraApp.ResultActivity"
-            android:exported="false" />
-
-        <!-- Activity - IMC Calculator App - Pantalla Principal -->
+            android:exported="false" /> <!-- Activity - IMC Calculator App - Pantalla Principal -->
         <activity
             android:name=".imcCalculator.ImcCalculatorActivity"
-            android:exported="false" />
-
-        <!-- Activity - IMC Calculator App - Pantalla Secundaria -->
+            android:exported="false" /> <!-- Activity - IMC Calculator App - Pantalla Secundaria -->
         <activity
             android:name=".imcCalculator.ResultIMCActivity"
             android:exported="false" />
+        <!-- Activity - TODO App - Pantalla Principal -->
+        <activity
+            android:name=".todoapp.TodoActivity"
+            android:exported="false" />
     </application>
-
 
 </manifest>

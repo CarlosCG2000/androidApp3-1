@@ -100,6 +100,21 @@
         app:layout_constraintStart_toStartOf="@id/gdv1"
         app:layout_constraintEnd_toEndOf="@id/gdv2"
         app:layout_constraintTop_toBottomOf="@+id/bt1"
+        app:layout_constraintBottom_toTopOf="@id/btTODO"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+    />
+
+    <Button
+        android:id="@+id/btTODO"
+        android:text="App TODO List"
+        android:textColor="@color/black"
+        android:backgroundTint="@android:color/holo_orange_light"
+
+        app:layout_constraintStart_toStartOf="@id/gdv1"
+        app:layout_constraintEnd_toEndOf="@id/gdv2"
+        app:layout_constraintTop_toBottomOf="@+id/btIMC"
         app:layout_constraintBottom_toTopOf="@id/btSuperHero"
 
         android:layout_width="wrap_content"
@@ -108,28 +123,13 @@
 
     <Button
         android:id="@+id/btSuperHero"
-        android:text="App TODO List"
-        android:textColor="@color/black"
-        android:backgroundTint="@android:color/holo_orange_light"
-
-        app:layout_constraintStart_toStartOf="@id/gdv1"
-        app:layout_constraintEnd_toEndOf="@id/gdv2"
-        app:layout_constraintTop_toBottomOf="@+id/btIMC"
-        app:layout_constraintBottom_toTopOf="@id/btMapas"
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-    />
-
-    <Button
-        android:id="@+id/btMapas"
         android:text="App Super Heroes"
         android:textColor="@color/black"
         android:backgroundTint="@android:color/holo_orange_light"
 
         app:layout_constraintStart_toStartOf="@id/gdv1"
         app:layout_constraintEnd_toEndOf="@id/gdv2"
-        app:layout_constraintTop_toBottomOf="@+id/btSuperHero"
+        app:layout_constraintTop_toBottomOf="@+id/btTODO"
         app:layout_constraintBottom_toBottomOf="@id/gdh2"
 
         android:layout_width="wrap_content"
