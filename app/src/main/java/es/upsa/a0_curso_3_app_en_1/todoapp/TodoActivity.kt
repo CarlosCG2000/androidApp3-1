@@ -99,6 +99,7 @@ class TodoActivity : AppCompatActivity() {
         categories[position].isSelected = !categories[position].isSelected
 
         categoriesAdapter.notifyItemChanged(position) // ha habido un item que ha estado modificado,en vez de como 'updateTasks()' que es mas general diciencio que se ha modficado algo en los TASK
+        updateTasks()
     }
 
     private fun onItemTaskSelected(position:Int){
@@ -168,7 +169,7 @@ class TodoActivity : AppCompatActivity() {
         tasksAdapter.tasks = newTasks
 
         tasksAdapter.notifyDataSetChanged() // no es lo mas optimo porque va acomprobar uno por uno todas las tareas.
-        
+
 
     }
 

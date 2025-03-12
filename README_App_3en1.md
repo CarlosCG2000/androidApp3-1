@@ -32,11 +32,11 @@ El temario del curso será:
   - Compatibilidad con múltiples idiomas (Strings) ✅
   - Listeners y clicks ✅
 
-- [Diseñar y programar app completa TODO](https://youtu.be/vJapzH_46a8?t=23805)
-  - Recyclerview
-  - Dialog
-  - Sealed class
-  - Funciones lambdas
+- [Diseñar y programar app completa TODO](https://youtu.be/vJapzH_46a8?t=23805) ✅
+  - Recyclerview ✅
+  - Dialog ✅
+  - Sealed class ✅
+  - Funciones lambdas ✅
 
 - [Diseñar y programar una buscador de Superhéroes](https://youtu.be/ndqIqh6joGA?t=9)
   - SearchView
@@ -50,6 +50,9 @@ El temario del curso será:
   - Modo noche
 
 =====================================================================================================
+
+# VIDEO: CURSO: ANDROID desde CERO con KOTLIN - TUTORIAL ANDROID STUDIO [2023] - PARTE 1
+# URL: `https://www.youtube.com/watch?v=vJapzH_46a8` (`HORAS 9:21`)
 
 # 0. Introducción del proyecto
 Lo primero que hay que hacer es entender el proyecto.
@@ -113,5 +116,21 @@ El `adapter` es una clase que conecta toda la información con el `RecyclerView`
 
 Vamos a necesitar las `Sealed Class`. Las clases selladas, con esto vamos a crear subclases o sub objetos de esta clase principal. Son como enumerados con superpoderes porque pueden contener estados.
 
-# MIN 09:19:49
+# VIDEO: CURSO: ANDROID desde CERO con KOTLIN - TUTORIAL ANDROID STUDIO [2023] - PARTE 2
+# URL: `https://www.youtube.com/watch?v=ndqIqh6joGA` (`HORAS 4:11`)
+
+Añadimos la dependencia para consumir APIS: `retroFit`.
+Ponemos en el buscador de dependencias `com.squareup.retrofit2:retrofit` y `com.squareup.retrofit2:converter-gson`.
+
+Las `corrutinas` para que no sea secuencial la llamada a la API ya que la llamada a servicios no debe hacerse en el hilo principal y bloquenado este por ello.
+Con las corrutinas podemos hacer llamadas asincronas.
+
+Los `permisos en el Manifest`: permiso de internet:  <uses-permission android:name="android.permission.INTERNET"/>
+
+
+
+
+# MIN 53:16
+
+
 

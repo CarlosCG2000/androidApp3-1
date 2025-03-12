@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import es.upsa.a0_curso_3_app_en_1.databinding.ActivityMenuBinding
 import es.upsa.a0_curso_3_app_en_1.imcCalculator.ImcCalculatorActivity
 import es.upsa.a0_curso_3_app_en_1.primeraApp.FirstAppActivity
+import es.upsa.a0_curso_3_app_en_1.superheroapp.SuperHeroListActivity
 import es.upsa.a0_curso_3_app_en_1.todoapp.TodoActivity
 
 class MenuActivity : AppCompatActivity() {
@@ -21,6 +22,7 @@ class MenuActivity : AppCompatActivity() {
         viewBinding.bt1.setOnClickListener { navegarToEjemploApp() }
         viewBinding.btIMC.setOnClickListener { navegarToIMCApp() }
         viewBinding.btTODO.setOnClickListener { navegarToTODOApp() }
+        viewBinding.btSuperHero.setOnClickListener { navegarSuperHeroApp() }
 
     }
 
@@ -36,6 +38,11 @@ class MenuActivity : AppCompatActivity() {
 
     private fun navegarToTODOApp(){
         val intent = Intent(this, TodoActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun navegarSuperHeroApp(){
+        val intent = Intent(this, SuperHeroListActivity::class.java)
         startActivity(intent)
     }
 
