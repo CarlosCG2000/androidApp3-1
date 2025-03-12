@@ -130,7 +130,7 @@ Los `permisos en el Manifest`: permiso de internet:  <uses-permission android:na
 
 
 
-# MIN 53:16
+# MIN 55:10
 
 
 

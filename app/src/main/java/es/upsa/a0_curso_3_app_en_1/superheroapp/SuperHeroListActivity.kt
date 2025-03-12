@@ -61,10 +61,15 @@ class SuperHeroListActivity : AppCompatActivity(), Logger {
                 if (response.isSuccessful) {
                     logInfo("Funciona correcto la llamada a la API")
 
-                    withContext(Dispatchers.Main) { // volvemos al hilo principal (interfaz)
-                        logInfo("Volvemos al hilo principal")
-                        // Aquí podrías actualizar la UI con los datos
+                    val body: SuperHeroDataResponse? = response.body()
+
+                    if(body != null) {
+                        withContext(Dispatchers.Main) { // volvemos al hilo principal (interfaz)
+                            logInfo("Volvemos al hilo principal con ${body.response}")
+                            // Aquí podrías actualizar la UI con los datos
+                        }
                     }
+
                 } else {
                     logError("No funciona la llamada a la API - Código: ${response.code()}")
                 }
