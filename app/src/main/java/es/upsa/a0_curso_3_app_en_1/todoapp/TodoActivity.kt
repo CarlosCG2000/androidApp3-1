@@ -1,9 +1,11 @@
 package es.upsa.a0_curso_3_app_en_1.todoapp
 
+import android.app.Dialog
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import es.upsa.a0_curso_3_app_en_1.databinding.ActivityTodoBinding
 import es.upsa.a0_curso_3_app_en_1.todoapp.category.CategoriesAdapter
 import es.upsa.a0_curso_3_app_en_1.todoapp.category.TaskCategory
@@ -20,6 +22,8 @@ class TodoActivity : AppCompatActivity() {
 
     private lateinit var rvTasks: RecyclerView
     private lateinit var tasksAdapter: TaskAdapter
+
+    private lateinit var fabAddTask: FloatingActionButton
 
     // Es el listado que le estoy pasando
     private val categories = listOf<TaskCategory>(
@@ -43,11 +47,13 @@ class TodoActivity : AppCompatActivity() {
         initComponent()
         initCategoriesUI()
         initTasksUI()
+        initListenerDialog()
     }
 
     private fun initComponent(){
         rvCategories = viewBinding.rvCategories
         rvTasks = viewBinding.rvTasks
+        fabAddTask= viewBinding.fabAddTask
     }
 
     private fun initCategoriesUI(){
@@ -73,6 +79,22 @@ class TodoActivity : AppCompatActivity() {
         rvTasks.layoutManager = LinearLayoutManager(this)
         // pasamos por ultimo el adapter
         rvTasks.adapter = tasksAdapter
+
+    }
+
+    private fun initListenerDialog(){
+        fabAddTask.setOnClickListener {
+
+        }
+    }
+
+    private fun showDialog(){
+        // Hay varios tipos de dialogos (pop up).
+        val dialog = Dialog(this) // creamos el dialogo
+
+        // Hay que crear la vista del dialogo y asignarselo. (dialog_task.xml)
+
+
 
     }
 
