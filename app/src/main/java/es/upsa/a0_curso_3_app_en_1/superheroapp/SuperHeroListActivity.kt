@@ -3,6 +3,7 @@ package es.upsa.a0_curso_3_app_en_1.superheroapp
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
+import androidx.core.view.isVisible
 import androidx.lifecycle.lifecycleScope
 import es.upsa.a0_curso_3_app_en_1.Logger
 import es.upsa.a0_curso_3_app_en_1.databinding.ActivitySuperHeroListBinding
@@ -47,6 +48,9 @@ class SuperHeroListActivity : AppCompatActivity(), Logger {
     }
 
     private fun searchByName(query: String) {
+
+        viewBinding.progressBar.isVisible = true
+
         // Trabajando con corrutinas
         logInfo("Antes de entrar en el hilo principal")
 
@@ -67,6 +71,7 @@ class SuperHeroListActivity : AppCompatActivity(), Logger {
                         withContext(Dispatchers.Main) { // volvemos al hilo principal (interfaz)
                             logInfo("Volvemos al hilo principal con ${body.response}")
                             // Aquí podrías actualizar la UI con los datos
+                            viewBinding.progressBar.isVisible = false
                         }
                     }
 

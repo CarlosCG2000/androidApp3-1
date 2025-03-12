@@ -128,9 +128,7 @@ Con las corrutinas podemos hacer llamadas asincronas.
 Los `permisos en el Manifest`: permiso de internet:  <uses-permission android:name="android.permission.INTERNET"/>
 
 
-
-
-# MIN 55:10
+# MIN 1:09:49
 
 
 
