@@ -28,6 +28,7 @@
             android:textSize="35sp"
             android:textStyle="bold" />
 
+        <!-- _________________CATEGORIAS_________________ -->
         <TextView
             style="@style/TodoSubtitle"
             android:layout_width="wrap_content"
@@ -40,32 +41,37 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-<!--        <TextView-->
-<!--            style="@style/TodoSubtitle"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginTop="32dp"-->
-<!--            android:text="@string/todo_tasks" />-->
+        <!-- _________________TOP_________________ -->
+        <!-- style="@style/TodoSubtitle"-ESTOY AÑADIENDO UN ESTILO CREADO EN 'THEMES.XML' -->
+        <TextView
+            style="@style/TodoSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/todo_tasks"
+            android:layout_marginHorizontal="32dp"/>
 
-<!--        <androidx.recyclerview.widget.RecyclerView-->
-<!--            android:id="@+id/rvTasks"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginHorizontal="32dp"-->
-<!--            android:layout_marginTop="16dp" />-->
-
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvTasks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="16dp" />
     </LinearLayout>
 
-<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
-<!--        android:id="@+id/fabAddTask"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_margin="32dp"-->
-<!--        android:src="@android:drawable/ic_input_add"-->
-<!--        app:backgroundTint="@color/todo_accent"-->
-<!--        app:fabSize="normal"-->
-<!--        android:layout_gravity="end|bottom"-->
-<!--        app:tint="@color/white" />-->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddTask"
+        android:src="@android:drawable/ic_input_add"
+        app:backgroundTint="@color/todo_accent"
+        app:fabSize="normal"
+        app:tint="@color/white"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="32dp"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

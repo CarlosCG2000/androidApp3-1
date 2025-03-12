@@ -113,5 +113,5 @@ El `adapter` es una clase que conecta toda la información con el `RecyclerView`
 
 Vamos a necesitar las `Sealed Class`. Las clases selladas, con esto vamos a crear subclases o sub objetos de esta clase principal. Son como enumerados con superpoderes porque pueden contener estados.
 
-# MIN 07:31:16
+# MIN 08:07:00
 

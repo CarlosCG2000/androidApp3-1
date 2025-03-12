@@ -1,19 +1,15 @@
-package es.upsa.a0_curso_3_app_en_1.todoapp
+package es.upsa.a0_curso_3_app_en_1.todoapp.category
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import es.upsa.a0_curso_3_app_en_1.R
-import es.upsa.a0_curso_3_app_en_1.databinding.ActivityTodoBinding
-
 
 class CategoriesAdapter(private val categories:List<TaskCategory>): RecyclerView.Adapter<CategoriesViewHolder>() {
 
     // Monta una vista
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CategoriesViewHolder {
-
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_task_category, parent, false)
-
         // Estoy creando un viewHolder (contiene el layout - view) para cada uno de los items
         return CategoriesViewHolder(view)
     }

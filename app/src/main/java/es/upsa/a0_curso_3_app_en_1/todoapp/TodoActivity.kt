@@ -1,15 +1,15 @@
 package es.upsa.a0_curso_3_app_en_1.todoapp
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import es.upsa.a0_curso_3_app_en_1.R
-import es.upsa.a0_curso_3_app_en_1.databinding.ActivityImcCalculatorBinding
 import es.upsa.a0_curso_3_app_en_1.databinding.ActivityTodoBinding
+import es.upsa.a0_curso_3_app_en_1.todoapp.category.CategoriesAdapter
+import es.upsa.a0_curso_3_app_en_1.todoapp.category.TaskCategory
+import es.upsa.a0_curso_3_app_en_1.todoapp.category.TaskCategory.*
+import es.upsa.a0_curso_3_app_en_1.todoapp.task.Task
+import es.upsa.a0_curso_3_app_en_1.todoapp.task.TaskAdapter
 
 class TodoActivity : AppCompatActivity() {
 
@@ -18,10 +18,21 @@ class TodoActivity : AppCompatActivity() {
     private lateinit var rvCategories: RecyclerView
     private lateinit var categoriesAdapter: CategoriesAdapter
 
+    private lateinit var rvTasks: RecyclerView
+    private lateinit var tasksAdapter: TaskAdapter
+
+    // Es el listado que le estoy pasando
     private val categories = listOf<TaskCategory>(
-        TaskCategory.Business,
-        TaskCategory.Personal,
-        TaskCategory.Other
+        Business, // TaskCategory.Business
+        Personal,
+        Other
+    )
+
+    // mutable poprque se van a ir borrando y añadiendo a la lista
+    private val tasks = mutableListOf<Task>(
+        Task("PruebaBusiness", Business), // , TaskCategory.Business
+        Task("PruebaPersonal", Personal),
+        Task("PruebaOther", Other)
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,14 +41,16 @@ class TodoActivity : AppCompatActivity() {
         setContentView(viewBinding.root)
 
         initComponent()
-        initUI()
+        initCategoriesUI()
+        initTasksUI()
     }
 
     private fun initComponent(){
         rvCategories = viewBinding.rvCategories
+        rvTasks = viewBinding.rvTasks
     }
 
-    private fun initUI(){
+    private fun initCategoriesUI(){
        // Vamos a tener que crear un adaptador y un viewHolder
        // El adapter es una clase que conecta toda la información con el RecyclerView. Es el puente entre los datos (items) y la interfaz (RecyclerView).
        // Y el ViewHolder va a ser la clase que lo pinta.
@@ -51,6 +64,16 @@ class TodoActivity : AppCompatActivity() {
 
         // pasamos por ultimo el adapter
         rvCategories.adapter = categoriesAdapter
+    }
+
+    private fun initTasksUI(){
+        // les pasamos las tasks
+        tasksAdapter = TaskAdapter(tasks)
+        // layoutManager en vertical (por defecto
+        rvTasks.layoutManager = LinearLayoutManager(this)
+        // pasamos por ultimo el adapter
+        rvTasks.adapter = tasksAdapter
+
     }
 
 }

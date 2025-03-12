@@ -22,5 +22,6 @@
     <string name="obesidad">Obesidad</string>
     <string name="descrip_obesidad">Estás muy encima de tu óptimo peso según tu altura</string>
     <string name="todo_title">Bienvenido, Carlos</string>
-    <string name="todo_categories">Categorías:</string>
+    <string name="todo_categories">Categorías</string>
+    <string name="todo_tasks">TAREAS</string>
 </resources>
