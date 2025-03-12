@@ -4,7 +4,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
 class SuperheroAdapter(var superheroList: List<SuperHeroItemResponse> = emptyList()): RecyclerView.Adapter<SuperheroViewHolder>() {
-    
+
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int

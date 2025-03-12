@@ -128,6 +128,79 @@ Con las corrutinas podemos hacer llamadas asincronas.
 Los `permisos en el Manifest`: permiso de internet:  <uses-permission android:name="android.permission.INTERNET"/>
 
 
+# ____________________________________________________
+
+# ¿Android el VM es el activity?
+No, en Android el ViewModel (VM) no es la Activity. Son dos componentes diferentes con responsabilidades distintas:
+•	Activity / Fragment → Se encarga de la interfaz de usuario (UI).
+•	ViewModel → Maneja la lógica de negocio y datos de manera persistente.
+
+🔹 Ejemplo de ViewModel en Android
+
+# 📌 Diferencias entre Activity y ViewModel en Android
+## 🔹 Responsabilidad
+- **Activity / Fragment:** Gestionar la UI
+- **ViewModel:** Gestionar la lógica y datos
+
+## 🔹 Ciclo de vida
+- **Activity / Fragment:** Atado a la UI (se destruye con ella)
+- **ViewModel:** Sobrevive a cambios de configuración (como rotación de pantalla)
+
+## 🔹 Dónde se usa
+- **Activity / Fragment:** XML (Layouts), eventos de UI
+- **ViewModel:** Mantiene datos, llamadas a la API, operaciones de base de datos
+
+## 🔹 Ejemplo de uso
+- **Activity / Fragment:** Mostrar un `RecyclerView`, recibir clicks de botones
+- **ViewModel:** Obtener datos de una API, aplicar lógica de negocio
+
+1️⃣ Definir el ViewModel
+```java
+class SuperHeroViewModel : ViewModel() {
+    private val _superheroData = MutableLiveData<List<SuperHero>>()
+    val superheroData: LiveData<List<SuperHero>> get() = _superheroData
+
+    fun fetchSuperheroes(query: String) {
+        viewModelScope.launch {
+            val response = api.getSuperheroes(query)
+            if (response.isSuccessful) {
+                _superheroData.postValue(response.body()?.results)
+            }
+        }
+    }
+}
+```
+
+2️⃣ Usar el ViewModel en la Activity
+```java
+class SuperHeroListActivity : AppCompatActivity() {
+    private lateinit var viewModel: SuperHeroViewModel
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_superhero_list)
+
+        viewModel = ViewModelProvider(this)[SuperHeroViewModel::class.java]
+
+        viewModel.superheroData.observe(this) { superheroes ->
+            // Actualizar la UI con los datos
+        }
+
+        searchButton.setOnClickListener {
+            viewModel.fetchSuperheroes("Batman")
+        }
+    }
+}
+```
+
+🔹 Beneficios del ViewModel
+
+✅ Sobrevive a cambios de configuración (como rotar la pantalla).
+✅ Separa la lógica de negocio de la UI.
+✅ Evita pérdida de datos cuando la Activity se destruye y se vuelve a crear.
+
+Si en tu app tienes lógica que quieres mantener aunque la Activity se destruya, usa un ViewModel. 🚀
+
 # MIN 1:09:49
 
 
