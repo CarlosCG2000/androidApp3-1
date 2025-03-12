@@ -5,7 +5,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import es.upsa.a0_curso_3_app_en_1.R
 
-class CategoriesAdapter(private val categories:List<TaskCategory>): RecyclerView.Adapter<CategoriesViewHolder>() {
+class CategoriesAdapter(private val categories:List<TaskCategory>,
+    private val onItemSelected:(Int) -> Unit // lamnbda para obtener el item u filtrar
+    ): RecyclerView.Adapter<CategoriesViewHolder>() {
 
     // Monta una vista
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CategoriesViewHolder {
@@ -17,7 +19,8 @@ class CategoriesAdapter(private val categories:List<TaskCategory>): RecyclerView
     // Pasa la informaicion que le tengo que pasar
     override fun onBindViewHolder( holder: CategoriesViewHolder, position: Int ) {
         //holder es como lla mar a cada uno de los items
-        holder.render(categories[position])
+        holder.render(categories[position],
+                      onItemSelected) // la lambda que esta tambein en el render del ViewHolder (Categories)
     }
 
     // Muestra el tamaño de elementos que le pasemos
