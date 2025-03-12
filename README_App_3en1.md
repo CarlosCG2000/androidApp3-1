@@ -127,7 +127,6 @@ Con las corrutinas podemos hacer llamadas asincronas.
 
 Los `permisos en el Manifest`: permiso de internet:  <uses-permission android:name="android.permission.INTERNET"/>
 
-
 # ____________________________________________________
 
 # ¿Android el VM es el activity?
@@ -200,6 +199,8 @@ class SuperHeroListActivity : AppCompatActivity() {
 ✅ Evita pérdida de datos cuando la Activity se destruye y se vuelve a crear.
 
 Si en tu app tienes lógica que quieres mantener aunque la Activity se destruya, usa un ViewModel. 🚀
+
+# ____________________________________________________
 
 # MIN 1:09:49
 
