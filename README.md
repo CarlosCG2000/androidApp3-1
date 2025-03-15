@@ -53,8 +53,49 @@ El temario del curso será:
 
 ## ESQUELETO DE LA APP
 
+- Fichero `MenuActivity.kt`: es un `class`.
+- Fichero `Logger.kt`: es una `interface` donde se definen los casos posibles de lineas de log.
 
+* Carpeta `primeraApp`:
+    - Fichero `FirstAppActivity.kt`: es un `class`
+    - Fichero `ResultActivity.kt`: es un `class`
 
+* Carpeta `imcCalculator`:
+    - Fichero `ImcCalculatorActivity.kt`: es un `class`
+    - Fichero `ResultIMCActivity.kt`: es un `class`
+
+* Carpeta `todoapp`:
+    - Fichero `TodoActivity.kt`: es un `class`
+
+    + Subcarpeta `category`:
+        - Fichero `TaskCategory.kt`: es un `sealed class`
+        - Fichero `CategoriesAdapter.kt`: es un `class`
+        - Fichero `CategoriesViewHolder.kt`: es un `class`
+
+    + Subcarpeta `task`:
+        - Fichero `Task.kt`: es un `data class`
+        - Fichero `TaskAdapter.kt`: es un `class`
+        - Fichero `TaskViewHolder.kt`: es un `class`
+
+* Carpeta `superheroapp`:
+    - Fichero `ApiService.kt`: es un `interface`
+    - Fichero `SuperHeroDataResponse.kt`: es un `data class`
+    - Fichero `SuperheroAdapter.kt`: es un `class`
+    - Fichero `SuperheroViewHolder.kt`: es un `class`
+    - Fichero `SuperHeroListActivity.kt`: es un `class`
+
+* Carpeta de recursos `layout`:
+    - Fichero `FirstAppActivity.xml`: vista Primera App Ejemplo
+    - Fichero `ResultActivity.xml`: vista Primera App Ejemplo
+    - Fichero `MenuActivity.xml`: vista IMC Calculator
+    - Fichero `ImcCalculatorActivity.xml`: vista IMC Calculator
+    - Fichero `ResultIMCActivity.xml`: vista IMC Calculator
+    - Fichero `TodoActivity.xml`: vista TODO List
+    - Fichero `ItemTodoTask.xml`: vista TODO List
+    - Fichero `ItemTaskCategory.xml`: vista TODO List
+    - Fichero `DialogTask.xml`: vista TODO List
+    - Fichero `SuperHeroListActivity.xml`: vista SuperHero
+    - ...
 
 # VIDEO: CURSO: ANDROID desde CERO con KOTLIN - TUTORIAL ANDROID STUDIO [2023] - PARTE 1
 # URL: `https://www.youtube.com/watch?v=vJapzH_46a8` (`HORAS 9:21`)
