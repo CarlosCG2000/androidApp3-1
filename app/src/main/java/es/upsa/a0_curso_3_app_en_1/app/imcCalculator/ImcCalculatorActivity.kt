@@ -1,6 +1,5 @@
-package es.upsa.a0_curso_3_app_en_1.imcCalculator
+package es.upsa.a0_curso_3_app_en_1.app.imcCalculator
 
-import android.content.Context
 import android.content.Intent
 import android.icu.text.DecimalFormat
 import android.os.Bundle
@@ -11,9 +10,8 @@ import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.slider.RangeSlider
-import es.upsa.a0_curso_3_app_en_1.Logger
+import es.upsa.a0_curso_3_app_en_1.app.Logger
 import es.upsa.a0_curso_3_app_en_1.R
-import es.upsa.a0_curso_3_app_en_1.imcCalculator.ResultIMCActivity
 import es.upsa.a0_curso_3_app_en_1.databinding.ActivityImcCalculatorBinding
 
 class ImcCalculatorActivity : AppCompatActivity(), Logger {

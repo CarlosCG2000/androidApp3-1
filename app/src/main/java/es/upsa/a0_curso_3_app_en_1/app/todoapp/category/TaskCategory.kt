@@ -1,4 +1,4 @@
-package es.upsa.a0_curso_3_app_en_1.todoapp.category
+package es.upsa.a0_curso_3_app_en_1.app.todoapp.category
 
 sealed class TaskCategory (var isSelected: Boolean = true) {
     object Personal: TaskCategory()

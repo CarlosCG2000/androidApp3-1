@@ -1,15 +1,14 @@
-package es.upsa.a0_curso_3_app_en_1
+package es.upsa.a0_curso_3_app_en_1.app
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import es.upsa.a0_curso_3_app_en_1.app.imcCalculator.ImcCalculatorActivity
+import es.upsa.a0_curso_3_app_en_1.app.primeraApp.FirstAppActivity
+import es.upsa.a0_curso_3_app_en_1.app.superheroapp.SuperHeroListActivity
+import es.upsa.a0_curso_3_app_en_1.app.todoapp.TodoActivity
 
 import es.upsa.a0_curso_3_app_en_1.databinding.ActivityMenuBinding
-import es.upsa.a0_curso_3_app_en_1.imcCalculator.ImcCalculatorActivity
-import es.upsa.a0_curso_3_app_en_1.primeraApp.FirstAppActivity
-import es.upsa.a0_curso_3_app_en_1.superheroapp.SuperHeroListActivity
-import es.upsa.a0_curso_3_app_en_1.todoapp.TodoActivity
 
 class MenuActivity : AppCompatActivity() {
 

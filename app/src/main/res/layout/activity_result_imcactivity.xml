@@ -9,7 +9,7 @@
     android:padding="16dp"
     android:background="@color/background_app"
 
-    tools:context=".imcCalculator.ResultIMCActivity">
+    tools:context=".app.imcCalculator.ResultIMCActivity">
 
     <TextView
         android:id="@+id/tvTitle"

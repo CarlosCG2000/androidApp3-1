@@ -1,4 +1,4 @@
-package es.upsa.a0_curso_3_app_en_1.todoapp.task
+package es.upsa.a0_curso_3_app_en_1.app.todoapp.task
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

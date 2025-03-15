@@ -19,7 +19,7 @@
         <!-- android:theme="@style/Theme._0_Curso3appen1" -->
         <!-- Activity Menu (principal) -->
         <activity
-            android:name=".MenuActivity"
+            android:name=".app.MenuActivity"
             android:exported="true">
 
             <!-- Esto es lo que dice que es el Activity principal, el que sale cunaod se inicia la pantalla -->
@@ -31,27 +31,27 @@
         </activity> <!-- Activity - 1 App - Pantalla Principal -->
 
         <activity
-            android:name=".primeraApp.FirstAppActivity"
+            android:name=".app.primeraApp.FirstAppActivity"
             android:exported="true" /> <!-- Activity 2 - 1 App - Pantalla Segunda -->
 
         <activity
-            android:name=".primeraApp.ResultActivity"
+            android:name=".app.primeraApp.ResultActivity"
             android:exported="false" /> <!-- Activity - IMC Calculator App - Pantalla Principal -->
 
         <activity
-            android:name=".imcCalculator.ImcCalculatorActivity"
+            android:name=".app.imcCalculator.ImcCalculatorActivity"
             android:exported="false" /> <!-- Activity - IMC Calculator App - Pantalla Secundaria -->
 
         <activity
-            android:name=".imcCalculator.ResultIMCActivity"
+            android:name=".app.imcCalculator.ResultIMCActivity"
             android:exported="false" /> <!-- Activity - TODO App - Pantalla Principal -->
 
         <activity
-            android:name=".todoapp.TodoActivity"
+            android:name=".app.todoapp.TodoActivity"
             android:exported="false" />
 
         <activity
-            android:name=".superheroapp.SuperHeroListActivity"
+            android:name=".app.superheroapp.SuperHeroListActivity"
             android:exported="false" />
     </application>
 

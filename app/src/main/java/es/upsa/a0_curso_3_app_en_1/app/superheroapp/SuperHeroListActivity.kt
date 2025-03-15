@@ -1,13 +1,12 @@
-package es.upsa.a0_curso_3_app_en_1.superheroapp
+package es.upsa.a0_curso_3_app_en_1.app.superheroapp
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.core.view.isVisible
 import androidx.lifecycle.lifecycleScope
-import es.upsa.a0_curso_3_app_en_1.Logger
+import es.upsa.a0_curso_3_app_en_1.app.Logger
 import es.upsa.a0_curso_3_app_en_1.databinding.ActivitySuperHeroListBinding
-import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext

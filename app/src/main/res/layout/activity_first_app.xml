@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".primeraApp.FirstAppActivity">
+    tools:context=".app.primeraApp.FirstAppActivity">
 
     <!-- Nuevas propiedades para TextView:
     - textSize: se utiliza para cambiar el tamaño de la fuente, en sp (scale-independent pixels) en vez de dp (density-independent pixels).

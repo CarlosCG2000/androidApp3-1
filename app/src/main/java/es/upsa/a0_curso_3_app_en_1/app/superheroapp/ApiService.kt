@@ -1,4 +1,4 @@
-package es.upsa.a0_curso_3_app_en_1.superheroapp
+package es.upsa.a0_curso_3_app_en_1.app.superheroapp
 
 import retrofit2.Response
 import retrofit2.http.GET

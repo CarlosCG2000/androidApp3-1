@@ -10,7 +10,7 @@
 
     android:background="@color/background_app"
 
-    tools:context=".imcCalculator.ImcCalculatorActivity">
+    tools:context=".app.imcCalculator.ImcCalculatorActivity">
 
     <!-- BOTONES DEL GENERO -->
     <androidx.cardview.widget.CardView

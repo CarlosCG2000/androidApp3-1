@@ -1,4 +1,4 @@
-package es.upsa.a0_curso_3_app_en_1
+package es.upsa.a0_curso_3_app_en_1.app
 
 import android.util.Log
 

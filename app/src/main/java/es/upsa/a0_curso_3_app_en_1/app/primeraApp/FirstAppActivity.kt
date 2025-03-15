@@ -1,10 +1,9 @@
-package es.upsa.a0_curso_3_app_en_1.primeraApp
+package es.upsa.a0_curso_3_app_en_1.app.primeraApp
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import es.upsa.a0_curso_3_app_en_1.Logger
+import es.upsa.a0_curso_3_app_en_1.app.Logger
 import es.upsa.a0_curso_3_app_en_1.R
 import es.upsa.a0_curso_3_app_en_1.databinding.ActivityFirstAppBinding
 

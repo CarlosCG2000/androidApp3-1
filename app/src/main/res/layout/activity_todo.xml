@@ -8,14 +8,14 @@
     android:layout_height="match_parent"
     android:background="@color/todo_background_todo_app"
 
-    tools:context=".todoapp.TodoActivity">
+    tools:context=".app.todoapp.TodoActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/todo_background_todo_app"
         android:orientation="vertical"
-        tools:context=".todoapp.TodoActivity">
+        tools:context=".app.todoapp.TodoActivity">
 
         <TextView
             android:layout_width="wrap_content"

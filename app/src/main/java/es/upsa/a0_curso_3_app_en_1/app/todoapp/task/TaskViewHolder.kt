@@ -1,4 +1,4 @@
-package es.upsa.a0_curso_3_app_en_1.todoapp.task
+package es.upsa.a0_curso_3_app_en_1.app.todoapp.task
 
 import android.content.res.ColorStateList
 import android.graphics.Paint
@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import es.upsa.a0_curso_3_app_en_1.R
-import es.upsa.a0_curso_3_app_en_1.todoapp.category.TaskCategory
+import es.upsa.a0_curso_3_app_en_1.app.todoapp.category.TaskCategory
 
 class TaskViewHolder(view: View): RecyclerView.ViewHolder(view) {
 

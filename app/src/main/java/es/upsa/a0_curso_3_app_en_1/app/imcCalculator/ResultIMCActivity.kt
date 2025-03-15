@@ -1,4 +1,4 @@
-package es.upsa.a0_curso_3_app_en_1.imcCalculator
+package es.upsa.a0_curso_3_app_en_1.app.imcCalculator
 
 import android.os.Bundle
 import android.widget.Button

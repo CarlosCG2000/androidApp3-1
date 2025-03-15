@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".primeraApp.ResultActivity">
+    tools:context=".app.primeraApp.ResultActivity">
 
     <!-- tools: texto de prueba pero no quiero que se vea en el simulador solo yo en la Preview -->
     <TextView
