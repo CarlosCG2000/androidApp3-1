@@ -51,6 +51,11 @@ El temario del curso será:
 
 =====================================================================================================
 
+## ESQUELETO DE LA APP
+
+
+
+
 # VIDEO: CURSO: ANDROID desde CERO con KOTLIN - TUTORIAL ANDROID STUDIO [2023] - PARTE 1
 # URL: `https://www.youtube.com/watch?v=vJapzH_46a8` (`HORAS 9:21`)
 
