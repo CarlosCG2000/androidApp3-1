@@ -250,5 +250,15 @@ Si en tu app tienes lógica que quieres mantener aunque la Activity se destruya,
 
 # MIN 1:09:49
 
+...
+
+# NUEVO CURSO DE ARIS: `Paging 3 en Jetpack Compose - [GUÍA COMPLETA] - Proyecto Completo MVVM`
+(`https://www.youtube.com/watch?v=4iJ2C9A0-Gk`)
+
+Proyecto: `1_App_Paginacion` (carpeta `App_Android`)
+
+# Paginación
+¿Mi app se podria mejorar en vez de llamando a todos los personajes o episodios de sus json usandolo con paging 3? SI
+
 
 
