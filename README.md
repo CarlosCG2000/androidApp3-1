@@ -260,5 +260,78 @@ Proyecto: `1_App_Paginacion` (carpeta `App_Android`)
 # Paginación
 ¿Mi app se podria mejorar en vez de llamando a todos los personajes o episodios de sus json usandolo con paging 3? SI
 
+# Dependencias
+Añadimos dependencias:
+`pagingCompose` = "3.3.0"
+`hilt` = "2.49"
+`hiltNavigationCompose` = "1.2.0"
+`retrofit` = "2.9.0"
+`coilCompose` = "2.8.0"
+
+# Arquitectura
+Nos vamos a saltar la capa de `domain` porque el proyecto va a ser simple. Entonces solo vamos a tener la capa de `data` y `presentation`.
+- Carpeta `data`
+X Carpeta `domain` (nos la saltamos en este mini proyecto)
+- Carpeta `presentation`
+
+# Pasos iniciales
+- `AppPaginacionApplication.kt`: cotneine la extension de `Application() `
+- `AndroidManifest.xml`: se le debe añadir la linea `android:name=".AppPaginacionApplication"`
+- `MainActivity`: se añade la macro para inyección de dependencias.
+- Carpeta `presentation`
+    + `RickListViewModel.kt` con inyección de dependecias
+    + `RickListScreen.kt` por parámetro se le pasa el View Model correspondiente (creando justo antes)
+
+## Retroit con API `http://rickandmortyapi.com/`
+Lo bueno que esta API tiene paginación incluida
+
+La API de paginación se caracterizan por estar formados por los resultados y por la `info` que nos ayuda a la paginación.
+
+```json
+{
+  "info": {
+    "count": 826,
+    "pages": 42,
+    "next": "https://rickandmortyapi.com/api/character/?page=2",
+    "prev": null
+  },
+  "results": [
+    {
+      "id": 1,
+      "name": "Rick Sanchez",
+      "status": "Alive",
+      "species": "Human",
+      "type": "",
+      "gender": "Male",
+      "origin": {
+        "name": "Earth",
+        "url": "https://rickandmortyapi.com/api/location/1"
+      },
+      "location": {
+        "name": "Earth",
+        "url": "https://rickandmortyapi.com/api/location/20"
+      },
+      "image": "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
+      "episode": [
+        "https://rickandmortyapi.com/api/episode/1",
+        "https://rickandmortyapi.com/api/episode/2",
+        // ...
+      ],
+      "url": "https://rickandmortyapi.com/api/character/1",
+      "created": "2017-11-04T18:48:46.250Z"
+    },
+    // ...
+  ]
+}
+```
+
+### [DUDA] ¿Si es una mock de datos sin paginación o una api sin paginación se puede hacer?
+
+# Creación en `data`
+
+- Carpeta `data`
+    + Interfaz de retrofit llamada `xxx`
 
 
+
+MIN 17:15
