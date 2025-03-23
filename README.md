@@ -275,8 +275,8 @@ X Carpeta `domain` (nos la saltamos en este mini proyecto)
 - Carpeta `presentation`
 
 # Pasos iniciales
-- `AppPaginacionApplication.kt`: cotneine la extension de `Application() `
-- `AndroidManifest.xml`: se le debe añadir la linea `android:name=".AppPaginacionApplication"`
+- `AppPaginacionApplication.kt`: contiene la extension de `Application()`
+- `AndroidManifest.xml`: se le debe añadir la linea `android:name=".AppPaginacionApplication"` y la conexión a internet
 - `MainActivity`: se añade la macro para inyección de dependencias.
 - Carpeta `presentation`
     + `RickListViewModel.kt` con inyección de dependecias
@@ -330,8 +330,8 @@ La API de paginación se caracterizan por estar formados por los resultados y po
 # Creación en `data`
 
 - Carpeta `data`
-    + Interfaz de retrofit llamada `xxx`
+    + Interfaz de retrofit llamada `RickMortyApiService.kt`
 
 
 
-MIN 17:15
+
