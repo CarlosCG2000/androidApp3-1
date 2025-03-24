@@ -383,3 +383,6 @@ Paging 3 `carga` los personajes de Rick & Morty `en partes`, en lugar de descarg
 - VER LAS MINI CLASES DE `Kotlin Tutorial` DE Antonio Leiva
 - ACABAR LA CLASE DE LA PARTE DE `NOTIFICACIONES`
 
+- VER DE MI PROYECTO (A TRAVÉS DE CHAT GPT) COMO HACER LE HILT PARA TESTING
+- EMPIZAR VIDEO DE: `https://www.youtube.com/watch?v=lX7CeooKCcQ&t=13959s`
+
