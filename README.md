@@ -249,18 +249,17 @@ Si en tu app tienes lógica que quieres mantener aunque la Activity se destruya,
 # ____________________________________________________
 
 # MIN 1:09:49
-
 ...
 
-# NUEVO CURSO DE ARIS: `Paging 3 en Jetpack Compose - [GUÍA COMPLETA] - Proyecto Completo MVVM`
+# _____________ NUEVO CURSO DE ARIS: `Paging 3 en Jetpack Compose - [GUÍA COMPLETA] - Proyecto Completo MVVM` _____________
 (`https://www.youtube.com/watch?v=4iJ2C9A0-Gk`)
 
-Proyecto: `1_App_Paginacion` (carpeta `App_Android`)
+Proyecto: `1_App_Paginacion` (carpeta `App_Android`) Incluye: `Hilt`, `Retroit`, `Paging 3`.
 
-# Paginación
+## Paginación
 ¿Mi app se podria mejorar en vez de llamando a todos los personajes o episodios de sus json usandolo con paging 3? SI
 
-# Dependencias
+## Dependencias
 Añadimos dependencias:
 `pagingCompose` = "3.3.0"
 `hilt` = "2.49"
@@ -268,13 +267,13 @@ Añadimos dependencias:
 `retrofit` = "2.9.0"
 `coilCompose` = "2.8.0"
 
-# Arquitectura
+## Arquitectura
 Nos vamos a saltar la capa de `domain` porque el proyecto va a ser simple. Entonces solo vamos a tener la capa de `data` y `presentation`.
 - Carpeta `data`
 X Carpeta `domain` (nos la saltamos en este mini proyecto)
 - Carpeta `presentation`
 
-# Pasos iniciales
+## Pasos iniciales
 - `AppPaginacionApplication.kt`: contiene la extension de `Application()`
 - `AndroidManifest.xml`: se le debe añadir la linea `android:name=".AppPaginacionApplication"` y la conexión a internet
 - `MainActivity`: se añade la macro para inyección de dependencias.
@@ -282,9 +281,27 @@ X Carpeta `domain` (nos la saltamos en este mini proyecto)
     + `RickListViewModel.kt` con inyección de dependecias
     + `RickListScreen.kt` por parámetro se le pasa el View Model correspondiente (creando justo antes)
 
-## Retroit con API `http://rickandmortyapi.com/`
-Lo bueno que esta API tiene paginación incluida
+## Cuerpo de la aplicación
+- Carpeta `data`
+    + Carpeta `response`
+        * `ResponseWrapper.kt` respuesta de la api.
+        * `CharacterResponse.kt`, entidad de la respuesta de la api con mappea a `CharacterModel` (entidad de presentation)
+        * `InfoResponse.kt`, entidad de la respuesta de la api que contiene la info para la páginación.
+    + `RickMortyApiService.kt`, define la llamada HTTP con @GET.
+    + `RickRepository`, recibe RickMortyApiService mediante @Inject, se conecta con Retrofit y carga los datos en páginas.
+    + `CharacterPagingSource`, se conecta con Retrofit y carga los datos en páginas.
+- Carpeta `di`
+    + `NetworkModule.kt`, configura Retrofit, OkHttp y la API de Rick & Morty con Hilt para la inyección de dependencias.
+- Carpeta `presentantion`
+  + Carpeta `model`
+        * `CharacterModel.kt`
+  + `RickListScreen.kt`
+  + `RickListViewModel.kt`
+- `AppPaginacionApplication.kt`
+- `MainActivity.kt`
 
+## `Retroit` con API `http://rickandmortyapi.com/`
+Lo bueno que esta API tiene paginación incluida
 La API de paginación se caracterizan por estar formados por los resultados y por la `info` que nos ayuda a la paginación.
 
 ```json
@@ -327,11 +344,35 @@ La API de paginación se caracterizan por estar formados por los resultados y po
 
 ### [DUDA] ¿Si es una mock de datos sin paginación o una api sin paginación se puede hacer?
 
-# Creación en `data`
+🔹 `Retrofit` → Responsable de la conexión con la API
+Retrofit se encarga de `definir y ejecutar las solicitudes HTTP` a la API de Rick & Morty.
 
-- Carpeta `data`
-    + Interfaz de retrofit llamada `RickMortyApiService.kt`
+📌 Dónde está en tu código:
+•	`RickMortyApiService`: Define la llamada HTTP con `@GET`.
+•	`NetworkModule`: Configura `Retrofit con Hilt` para la inyección de dependencias.
 
+## `Hilt` → Inyección de dependencias
+Hilt se encarga de gestionar `las dependencias de Retrofit y del repositorio`, evitando que instanciemos manualmente los objetos.
 
+📌 Dónde está en tu código:
+•	`NetworkModule`: Es un `módulo de Hilt` que provee `Retrofit` y `OkHttp`.
+•	`RickRepository`: Recibe `RickMortyApiService` mediante `@Inject`.
+•	`AppPaginacionApplication`: Usa `@HiltAndroidApp` para inicializar Hilt.
+•	`RickListViewModel`: Usa `@HiltViewModel` para que Hilt gestione su instancia.
 
+## `Paging 3` → Manejo de paginación de datos
+Paging 3 `carga` los personajes de Rick & Morty `en partes`, en lugar de descargar todos a la vez.
+
+📌 Dónde está en tu código:
+•	`CharacterPagingSource`: Se conecta con Retrofit y carga los datos en páginas.
+•	`RickRepository`: Usa Pager para manejar la paginación.
+•	`RickListViewModel`: Exposición de PagingData<CharacterModel>.
+•	`RickListScreen`: Usa collectAsLazyPagingItems() para convertir PagingData en un formato compatible con Jetpack Compose.
+•	`CharactersList`: Usa LazyColumn para mostrar la lista paginada.
+
+## Si solo quieres implementar una de estas en tu proyecto
+✅ Si solo quieres `Retrofit` → Usa `RickMortyApiService` y `NetworkModule`. No necesitas `PagingSource` ni `Pager`.
+✅ Si solo quieres `Hilt` → Usa `NetworkModule` y `@Inject` en tus clases. No necesitas `PagingSource`. Aplica` @HiltViewModel` y ` @HiltAndroidApp` sin necesidad de paginación. Usa `PagingData` y `LazyPagingItems`, pero podrías usar una fuente de `datos local` en vez de `Retrofit`.
+✅ Si solo quieres `Paging 3 `→ Usa `PagingSource` y `Pager`, pero en vez de una `API real`, podrías usar una `lista local`.
+✅ Si solo `Jetpack Compose`: Usa LazyColumn para mostrar listas sin Paging 3.
 
