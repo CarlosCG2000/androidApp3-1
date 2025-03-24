@@ -376,3 +376,10 @@ Paging 3 `carga` los personajes de Rick & Morty `en partes`, en lugar de descarg
 ✅ Si solo quieres `Paging 3 `→ Usa `PagingSource` y `Pager`, pero en vez de una `API real`, podrías usar una `lista local`.
 ✅ Si solo `Jetpack Compose`: Usa LazyColumn para mostrar listas sin Paging 3.
 
+# _____________ NUEVO CURSO DE ARIS: `MVVM con JETPACK COMPOSE desde CERO - [GUÍA COMPLETA] - Proyecto Completo MVVM` _____________
+(`https://www.youtube.com/watch?v=EmUx8wgRxJw`)
+
+- HACER `RESUMEN` DE ESTO Y PASARLO A UN `NUEVO PROYECTO POR MI`
+- VER LAS MINI CLASES DE `Kotlin Tutorial` DE Antonio Leiva
+- ACABAR LA CLASE DE LA PARTE DE `NOTIFICACIONES`
+
