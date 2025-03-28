@@ -379,10 +379,13 @@ Paging 3 `carga` los personajes de Rick & Morty `en partes`, en lugar de descarg
 # _____________ NUEVO CURSO DE ARIS: `MVVM con JETPACK COMPOSE desde CERO - [GUÍA COMPLETA] - Proyecto Completo MVVM` _____________
 (`https://www.youtube.com/watch?v=EmUx8wgRxJw`)
 
-- HACER `RESUMEN` DE ESTO Y PASARLO A UN `NUEVO PROYECTO POR MI`
-- VER LAS MINI CLASES DE `Kotlin Tutorial` DE Antonio Leiva
-- ACABAR LA CLASE DE LA PARTE DE `NOTIFICACIONES`
+Proyecto: `2_ArquitecturaMVVM` (carpeta `App_Android`) Incluye: `ViewModel`, `LiveData`, `Screen Compose Personalizada`
 
-- VER DE MI PROYECTO (A TRAVÉS DE CHAT GPT) COMO HACER LE HILT PARA TESTING
-- EMPIZAR VIDEO DE: `https://www.youtube.com/watch?v=lX7CeooKCcQ&t=13959s`
+Esquema:
+- `MainActitivity.kt`
+- Carpeta `ui`
+    `LoginScreen.kt`
+    `LoginViewModel.kt`
+
+Muy simple.
 
